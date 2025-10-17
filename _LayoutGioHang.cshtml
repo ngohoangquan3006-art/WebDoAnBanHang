@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheGioiDiDong.com - Điện thoại, Laptop, Tablet, Phụ kiện chính hãng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+   
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="#" class="logo" onclick="showPage('home')">THE<span>GIOI</span>DIDONG.COM</a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Bạn tìm gì...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="user-action" onclick="showAuthModal()">
+                        <i class="fas fa-user"></i>
+                        <span>Tài khoản</span>
+                    </a>
+                    <a href="#" class="user-action" onclick="showPage('cart')">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Tablet</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Smartwatch</a></li>
+                    <li><a href="#">Đồng hồ</a></li>
+                    <li><a href="#">Máy cũ giá rẻ</a></li>
+                    <li><a href="#">Sim, thẻ cào</a></li>
+                    <li><a href="#">Dịch vụ tiện ích</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="home" class="page active">
+        <div class="container">
+           
+            <div class="banner">
+                <img src="https://via.placeholder.com/1200x300?text=Banner+Khuyến+Mãi" alt="Banner khuyến mãi">
+            </div>
+
+            
+            <div class="categories">
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>Điện thoại</div>
+                </a>
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div>Laptop</div>
+                </a>
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div>Tablet</div>
+                </a>
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div>Phụ kiện</div>
+                </a>
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>Đồng hồ</div>
+                </a>
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div>TV</div>
+                </a>
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div>Nhà thông minh</div>
+                </a>
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div>Gaming</div>
+                </a>
+            </div>
+
+            <!-- Flash Sale -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">FLASH SALE</h2>
+                    <a href="#" class="view-all">Xem tất cả</a>
+                </div>
+                <div class="products">
+                    <!-- Product 1 -->
+                    <div class="product" onclick="showProductDetail(1)">
+                        <img src="https://via.placeholder.com/200x200?text=iPhone+14" alt="iPhone 14" class="product-image">
+                        <h3 class="product-name">iPhone 14 Pro Max 128GB</h3>
+                        <div class="product-price">25.990.000đ</div>
+                        <div class="product-promotion">Giảm 1.000.000đ</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(1)">Thêm vào giỏ</button>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product" onclick="showProductDetail(2)">
+                        <img src="https://via.placeholder.com/200x200?text=Samsung+S23" alt="Samsung S23" class="product-image">
+                        <h3 class="product-name">Samsung Galaxy S23 Ultra 256GB</h3>
+                        <div class="product-price">22.990.000đ</div>
+                        <div class="product-promotion">Giảm 2.000.000đ</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(2)">Thêm vào giỏ</button>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product" onclick="showProductDetail(3)">
+                        <img src="https://via.placeholder.com/200x200?text=Xiaomi+13" alt="Xiaomi 13" class="product-image">
+                        <h3 class="product-name">Xiaomi 13 Lite 8GB 128GB</h3>
+                        <div class="product-price">8.490.000đ</div>
+                        <div class="product-promotion">Giảm 500.000đ</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(3)">Thêm vào giỏ</button>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product" onclick="showProductDetail(4)">
+                        <img src="https://via.placeholder.com/200x200?text=OPPO+Find" alt="OPPO Find" class="product-image">
+                        <h3 class="product-name">OPPO Find N2 Flip 8GB 256GB</h3>
+                        <div class="product-price">17.990.000đ</div>
+                        <div class="product-promotion">Giảm 1.500.000đ</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(4)">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">ĐIỆN THOẠI NỔI BẬT</h2>
+                    <a href="#" class="view-all">Xem tất cả</a>
+                </div>
+                <div class="products">
+                    <!-- Product 5 -->
+                    <div class="product" onclick="showProductDetail(5)">
+                        <img src="https://via.placeholder.com/200x200?text=iPhone+13" alt="iPhone 13" class="product-image">
+                        <h3 class="product-name">iPhone 13 128GB</h3>
+                        <div class="product-price">16.990.000đ <span class="product-original-price">18.990.000đ</span></div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(5)">Thêm vào giỏ</button>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product" onclick="showProductDetail(6)">
+                        <img src="https://via.placeholder.com/200x200?text=Samsung+A54" alt="Samsung A54" class="product-image">
+                        <h3 class="product-name">Samsung Galaxy A54 5G 8GB 128GB</h3>
+                        <div class="product-price">8.490.000đ</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(6)">Thêm vào giỏ</button>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="product" onclick="showProductDetail(7)">
+                        <img src="https://via.placeholder.com/200x200?text=Vivo+V27" alt="Vivo V27" class="product-image">
+                        <h3 class="product-name">Vivo V27 8GB 256GB</h3>
+                        <div class="product-price">10.990.000đ</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(7)">Thêm vào giỏ</button>
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="product" onclick="showProductDetail(8)">
+                        <img src="https://via.placeholder.com/200x200?text=Realme+10" alt="Realme 10" class="product-image">
+                        <h3 class="product-name">Realme 10 Pro+ 5G 8GB 128GB</h3>
+                        <div class="product-price">7.490.000đ</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(8)">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Page -->
+    <div id="product-detail" class="page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#" onclick="showPage('home')">Trang chủ</a>
+                <span>></span>
+                <a href="#">Điện thoại</a>
+                <span>></span>
+                <a href="#">Apple</a>
+                <span>></span>
+                <span id="breadcrumb-product-name">iPhone 14 Pro Max</span>
+            </div>
+
+            <div class="product-detail">
+                <div class="product-images">
+                    <img src="https://via.placeholder.com/500x500?text=iPhone+14+Pro+Max" alt="iPhone 14 Pro Max" class="product-main-image" id="product-main-image">
+                </div>
+                <div class="product-info">
+                    <h1 class="product-detail-name" id="product-detail-name">iPhone 14 Pro Max 128GB</h1>
+                    <div class="product-detail-price" id="product-detail-price">25.990.000đ</div>
+
+                    <div class="product-options">
+                        <div class="option-title">Chọn màu:</div>
+                        <div class="option-buttons">
+                            <button class="option-btn active" data-color="Tím" data-image="https://via.placeholder.com/500x500?text=iPhone+14+Pro+Max+Tím">Tím</button>
+                            <button class="option-btn" data-color="Vàng" data-image="https://via.placeholder.com/500x500?text=iPhone+14+Pro+Max+Vàng">Vàng</button>
+                            <button class="option-btn" data-color="Bạc" data-image="https://via.placeholder.com/500x500?text=iPhone+14+Pro+Max+Bạc">Bạc</button>
+                            <button class="option-btn" data-color="Đen" data-image="https://via.placeholder.com/500x500?text=iPhone+14+Pro+Max+Đen">Đen</button>
+                        </div>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-title">Chọn dung lượng:</div>
+                        <div class="option-buttons">
+                            <button class="option-btn active" data-storage="128GB">128GB</button>
+                            <button class="option-btn" data-storage="256GB">256GB</button>
+                            <button class="option-btn" data-storage="512GB">512GB</button>
+                            <button class="option-btn" data-storage="1TB">1TB</button>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="buy-now">MUA NGAY</button>
+                        <button class="add-to-cart-detail" id="add-to-cart-detail">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart" class="page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#" onclick="showPage('home')">Trang chủ</a>
+                <span>></span>
+                <span>Giỏ hàng</span>
+            </div>
+
+            <div class="cart-page">
+                <div class="cart-items">
+                    <h2>Giỏ hàng của bạn</h2>
+                    <div id="cart-items-container">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3>Thông tin đơn hàng</h3>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="cart-subtotal">0đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span style="color: #00a650;">Miễn phí</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Tổng tiền:</span>
+                        <span id="cart-total">0đ</span>
+                    </div>
+                    <button class="checkout-btn">TIẾN HÀNH ĐẶT HÀNG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CHĂM SÓC KHÁCH HÀNG</h3>
+                    <a href="#">Trung Tâm Trợ Giúp</a>
+                    <a href="#">Hướng Dẫn Mua Hàng</a>
+                    <a href="#">Thanh Toán</a>
+                    <a href="#">Vận Chuyển</a>
+                    <a href="#">Chăm Sóc Khách Hàng</a>
+                    <a href="#">Chính Sách Bảo Hành</a>
+                </div>
+                <div class="footer-column">
+                    <h3>VỀ CÔNG TY</h3>
+                    <a href="#">Giới Thiệu</a>
+                    <a href="#">Tuyển Dụng</a>
+                    <a href="#">Chính Sách Bảo Mật</a>
+                    <a href="#">Chính Hãng</a>
+                    <a href="#">Kênh Người Bán</a>
+                    <a href="#">Flash Sales</a>
+                </div>
+                <div class="footer-column">
+                    <h3>DANH MỤC</h3>
+                    <a href="#">Điện Thoại</a>
+                    <a href="#">Laptop</a>
+                    <a href="#">Máy Tính Bảng</a>
+                    <a href="#">Phụ Kiện</a>
+                    <a href="#">Smartwatch</a>
+                    <a href="#">Đồng Hồ</a>
+                </div>
+                <div class="footer-column">
+                    <h3>THEO DÕI CHÚNG TÔI TRÊN</h3>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 TheGioiDiDong.com. Tất cả các quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Đăng nhập / Đăng ký</h3>
+                <button class="close-modal" onclick="closeAuthModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchAuthTab('login')">ĐĂNG NHẬP</button>
+                    <button class="auth-tab" onclick="switchAuthTab('register')">ĐĂNG KÝ</button>
+                </div>
+
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Email/Số điện thoại" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Mật khẩu" required>
+                    </div>
+                    <button type="submit" class="submit-btn">ĐĂNG NHẬP</button>
+                    <div class="form-footer">
+                        Quên mật khẩu? <a href="#">Nhấn vào đây</a>
+                    </div>
+                </form>
+
+                <form id="register-form" class="auth-form" style="display: none;">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Họ và tên" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Mật khẩu" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Xác nhận mật khẩu" required>
+                    </div>
+                    <button type="submit" class="submit-btn">ĐĂNG KÝ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>// Products data
+        const products = {
+            1: { name: "iPhone 14 Pro Max 128GB", price: 25990000, image: "https://via.placeholder.com/500x500?text=iPhone+14+Pro+Max" },
+            2: { name: "Samsung Galaxy S23 Ultra 256GB", price: 22990000, image: "https://via.placeholder.com/500x500?text=Samsung+S23+Ultra" },
+            3: { name: "Xiaomi 13 Lite 8GB 128GB", price: 8490000, image: "https://via.placeholder.com/500x500?text=Xiaomi+13+Lite" },
+            4: { name: "OPPO Find N2 Flip 8GB 256GB", price: 17990000, image: "https://via.placeholder.com/500x500?text=OPPO+Find+N2+Flip" },
+            5: { name: "iPhone 13 128GB", price: 16990000, image: "https://via.placeholder.com/500x500?text=iPhone+13" },
+            6: { name: "Samsung Galaxy A54 5G 8GB 128GB", price: 8490000, image: "https://via.placeholder.com/500x500?text=Samsung+A54" },
+            7: { name: "Vivo V27 8GB 256GB", price: 10990000, image: "https://via.placeholder.com/500x500?text=Vivo+V27" },
+            8: { name: "Realme 10 Pro+ 5G 8GB 128GB", price: 7490000, image: "https://via.placeholder.com/500x500?text=Realme+10+Pro+" }
+        };
+
+        // Cart data
+        let cart = [];
+
+        // Page navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Auth modal
+        function showAuthModal() {
+            document.getElementById('auth-modal').style.display = 'flex';
+        }
+
+        function closeAuthModal() {
+            document.getElementById('auth-modal').style.display = 'none';
+        }
+
+        function switchAuthTab(tab) {
+            if (tab === 'login') {
+                document.getElementById('login-form').style.display = 'block';
+                document.getElementById('register-form').style.display = 'none';
+                document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.auth-tab')[0].classList.add('active');
+            } else {
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('register-form').style.display = 'block';
+                document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.auth-tab')[1].classList.add('active');
+            }
+        }
+
+        // Product detail
+        function showProductDetail(productId) {
+            const product = products[productId];
+            document.getElementById('product-detail-name').textContent = product.name;
+            document.getElementById('product-detail-price').textContent = formatPrice(product.price) + 'đ';
+            document.getElementById('product-main-image').src = product.image;
+            document.getElementById('breadcrumb-product-name').textContent = product.name;
+
+            // Set up add to cart button
+            document.getElementById('add-to-cart-detail').onclick = function () {
+                addToCart(productId);
+            };
+
+            // Set up option buttons
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all buttons in the same group
+                    this.parentElement.querySelectorAll('.option-btn').forEach(b => {
+                        b.classList.remove('active');
+                    });
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Update image if color button
+                    if (this.dataset.image) {
+                        document.getElementById('product-main-image').src = this.dataset.image;
+                    }
+                });
+            });
+
+            showPage('product-detail');
+        }
+
+        // Cart functions
+        function addToCart(productId) {
+            const product = products[productId];
+            const existingItem = cart.find(item => item.id === productId);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+
+            updateCartDisplay();
+            alert('Đã thêm sản phẩm vào giỏ hàng!');
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartDisplay();
+        }
+
+        function updateQuantity(productId, change) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity < 1) {
+                    removeFromCart(productId);
+                } else {
+                    updateCartDisplay();
+                }
+            }
+        }
+
+        function updateCartDisplay() {
+            const container = document.getElementById('cart-items-container');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const totalEl = document.getElementById('cart-total');
+
+            container.innerHTML = '';
+
+            let subtotal = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = '<p>Giỏ hàng của bạn đang trống</p>';
+            } else {
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.innerHTML = `
+                            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                            <div class="cart-item-details">
+                                <h3 class="cart-item-name">${item.name}</h3>
+                                <div class="cart-item-price">${formatPrice(item.price)}đ</div>
+                                <div class="cart-item-actions">
+                                    <button class="remove-btn" onclick="removeFromCart(${item.id})">Xoá</button>
+                                    <div class="quantity-control">
+                                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                                        <input type="text" class="quantity-input" value="${item.quantity}" readonly>
+                                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    container.appendChild(cartItem);
+                });
+            }
+
+            subtotalEl.textContent = formatPrice(subtotal) + 'đ';
+            totalEl.textContent = formatPrice(subtotal) + 'đ';
+        }
+
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Form submissions
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Đăng nhập thành công!');
+            closeAuthModal();
+        });
+
+        document.getElementById('register-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Đăng ký thành công!');
+            closeAuthModal();
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('auth-modal');
+            if (event.target === modal) {
+                closeAuthModal();
+            }
+        };
+
+        // Initialize cart display
+        updateCartDisplay();</script>
+    <div>
+        @RenderBody();
+    </div>
+</body>
+</html>
