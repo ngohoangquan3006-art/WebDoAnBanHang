@@ -1,0 +1,408 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="~/Content/StyleStore/StyleStore.css" rel="stylesheet" />
+    <script src="~/Scripts/StyleStore/Style1.js"></script>
+}
+
+<div id="home" class="page active">
+    <div class="container">
+        
+        <div class="banner">
+            <img src="~/Hinh/bannerkhuyenmai.jpg" alt="Banner khuyến mãi">
+        </div>
+     
+        <div class="categories">
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div>Điện thoại</div>
+            </a>
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div>Laptop</div>
+            </a>
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-tablet-alt"></i>
+                </div>
+                <div>Tablet</div>
+            </a>
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <div>Phụ kiện</div>
+            </a>
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div>Đồng hồ</div>
+            </a>
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <div>TV</div>
+            </a>
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div>Nhà thông minh</div>
+            </a>
+            <a href="#" class="category">
+                <div class="category-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div>Gaming</div>
+            </a>
+        </div>
+
+       
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">FLASH SALE</h2>
+                <a href="#" class="view-all">Xem tất cả</a>
+            </div>
+            <div class="products">
+              
+            </div>
+        </div>
+
+     
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">ĐIỆN THOẠI NỔI BẬT</h2>
+                <a href="#" class="view-all">Xem tất cả</a>
+            </div>
+            <div class="products">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-detail" class="page">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#" onclick="showPage('home')">Trang chủ</a>
+            <span>></span>
+            <a href="#">Điện thoại</a>
+            <span>></span>
+            <a href="#">Apple</a>
+            <span>></span>
+            <span id="breadcrumb-product-name">iPhone 14 Pro Max</span>
+        </div>
+
+        <div class="product-detail">
+            <div class="product-images">
+                <img src="https://cdn.tgdd.vn/Products/Images/42/342679/iphone-17-pro-max-cam-thumb-600x600.jpg" alt="iPhone 17 Pro Max" class="product-main-image" id="product-main-image">
+            </div>
+            <div class="product-info">
+                <h1 class="product-detail-name" id="product-detail-name">iPhone 14 Pro Max 128GB</h1>
+                <div class="product-detail-price" id="product-detail-price">25.990.000đ</div>
+
+                <div class="product-options">
+                    <div class="option-title">Chọn màu:</div>
+                    <div class="option-buttons">
+                        <button class="option-btn active" data-color="Xanh" data-image="https://cdn.tgdd.vn/Products/Images/42/342681/iphone-17-pro-max-1tb-xanh-duong-thumb-600x600.jpg">Xanh đậm</button>
+                        <button class="option-btn" data-color="Vàng" data-image="https://cdn.tgdd.vn/Products/Images/42/342679/iphone-17-pro-max-cam-thumb-600x600.jpg">Cam</button> 
+                    </div>
+                </div>
+
+                <div class="product-options">
+                    <div class="option-title">Chọn dung lượng:</div>
+                    <div class="option-buttons">
+                        <button class="option-btn active" data-storage="128GB">128GB</button>
+                        <button class="option-btn" data-storage="256GB">256GB</button>
+                        <button class="option-btn" data-storage="512GB">512GB</button>
+                        <button class="option-btn" data-storage="1TB">1TB</button>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button class="buy-now" onclick="buyNow()">MUA NGAY</button>
+                    <button class="add-to-cart-detail" id="add-to-cart-detail">THÊM VÀO GIỎ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cart" class="page">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#" onclick="showPage('home')">Trang chủ</a>
+            <span>></span>
+            <span>Giỏ hàng</span>
+        </div>
+
+        <div class="cart-page">
+            <div class="cart-items">
+                <h2>Giỏ hàng của bạn</h2>
+                <div id="cart-items-container">
+                 
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h3>Thông tin đơn hàng</h3>
+                <div class="summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="cart-subtotal">0đ</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phí vận chuyển:</span>
+                    <span style="color: var(--success-color);">Miễn phí</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Tổng tiền:</span>
+                    <span id="cart-total">0đ</span>
+                </div>
+                <button class="checkout-btn" onclick="showPage('checkout')">TIẾN HÀNH ĐẶT HÀNG</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="checkout" class="page">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#" onclick="showPage('home')">Trang chủ</a>
+            <span>></span>
+            <a href="#" onclick="showPage('cart')">Giỏ hàng</a>
+            <span>></span>
+            <span>Thanh toán</span>
+        </div>
+
+        <div class="checkout-page">
+            <div class="checkout-form">
+                <h2>Thông tin thanh toán</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label class="form-label">Họ và tên *</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Số điện thoại *</label>
+                        <input type="tel" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Địa chỉ nhận hàng *</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ghi chú</label>
+                        <textarea class="form-input" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phương thức thanh toán</label>
+                        <div class="payment-methods">
+                            <div class="payment-method active">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <div>Thanh toán khi nhận hàng</div>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fas fa-credit-card"></i>
+                                <div>Thẻ tín dụng</div>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fas fa-qrcode"></i>
+                                <div>QR Code</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="checkout-summary">
+                <h3>Đơn hàng của bạn</h3>
+                <div id="checkout-items">
+                   
+                </div>
+                <div class="summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="checkout-subtotal">0đ</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phí vận chuyển:</span>
+                    <span style="color: var(--success-color);">Miễn phí</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Tổng tiền:</span>
+                    <span id="checkout-total">0đ</span>
+                </div>
+                <button class="checkout-btn" onclick="placeOrder()">HOÀN TẤT ĐẶT HÀNG</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="order-success" class="page">
+    <div class="container">
+        <div class="success-page">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="success-title">Đặt hàng thành công!</h2>
+            <p class="success-message">Cảm ơn bạn đã đặt hàng. Đơn hàng của bạn đã được tiếp nhận và đang được xử lý.</p>
+            <div class="order-details">
+                <p><strong>Mã đơn hàng:</strong> <span id="order-id">DH123456</span></p>
+                <p><strong>Tổng tiền:</strong> <span id="order-total">0đ</span></p>
+                <p><strong>Dự kiến giao hàng:</strong> 2-3 ngày làm việc</p>
+            </div>
+            <div class="product-actions">
+                <button class="buy-now" onclick="showPage('home')">TIẾP TỤC MUA SẮM</button>
+                <button class="add-to-cart-detail" onclick="showPage('order-history')">XEM LỊCH SỬ ĐƠN HÀNG</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="order-history" class="page">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#" onclick="showPage('home')">Trang chủ</a>
+            <span>></span>
+            <span>Lịch sử đơn hàng</span>
+        </div>
+
+        <div class="order-history">
+            <h2>Lịch sử đơn hàng</h2>
+            <div id="orders-container">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="admin" class="page">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#" onclick="showPage('home')">Trang chủ</a>
+            <span>></span>
+            <span>Quản lý</span>
+        </div>
+
+        <div class="admin-panel">
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="switchAdminTab('products')">Sản phẩm</button>
+                <button class="admin-tab" onclick="switchAdminTab('orders')">Đơn hàng</button>
+                <button class="admin-tab" onclick="switchAdminTab('users')">Người dùng</button>
+            </div>
+
+            <div id="admin-products" class="admin-content active">
+                <h3>Quản lý sản phẩm</h3>
+                <button class="btn btn-primary" style="margin-bottom: 15px;">Thêm sản phẩm</button>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Danh mục</th>
+                            <th>Tồn kho</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-products-table">
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="admin-orders" class="admin-content">
+                <h3>Quản lý đơn hàng</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn</th>
+                            <th>Khách hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày đặt</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-orders-table">
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="admin-users" class="admin-content">
+                <h3>Quản lý người dùng</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Vai trò</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-users-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="auth-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Đăng nhập / Đăng ký</h3>
+            <button class="close-modal" onclick="closeAuthModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="auth-tabs">
+                <button class="auth-tab active" onclick="switchAuthTab('login')">ĐĂNG NHẬP</button>
+                <button class="auth-tab" onclick="switchAuthTab('register')">ĐĂNG KÝ</button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Email/Số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Mật khẩu" required>
+                </div>
+                <button type="submit" class="submit-btn">ĐĂNG NHẬP</button>
+                <div class="form-footer">
+                    Quên mật khẩu? <a href="#">Nhấn vào đây</a>
+                </div>
+            </form>
+
+            <form id="register-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Mật khẩu" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Xác nhận mật khẩu" required>
+                </div>
+                <button type="submit" class="submit-btn">ĐĂNG KÝ</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Điện thoại, Laptop, Tablet, Phụ kiện chính hãng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="~/Content/StyleStore/StyleStore.css" rel="stylesheet" />
+    <script src="~/Scripts/StyleStore/Style1.js"></script>
+</head>
+<body>
+  
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="#" class="logo" onclick="showPage('home')">TECH<span>STORE</span></a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Bạn tìm gì...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="user-action" onclick="showAuthModal()">
+                        <i class="fas fa-user"></i>
+                        <span>Tài khoản</span>
+                    </a>
+                    <a href="#" class="user-action" onclick="showPage('cart')">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                    <a href="#" class="user-action" onclick="showPage('admin')" id="admin-link" style="display: none;">
+                        <i class="fas fa-cog"></i>
+                        <span>Quản lý</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#" onclick="showPage('home')">Trang chủ</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Tablet</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Smartwatch</a></li>
+                    <li><a href="#">Đồng hồ</a></li>
+                    <li><a href="#">Máy cũ giá rẻ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+  
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CHĂM SÓC KHÁCH HÀNG</h3>
+                    <a href="#">Trung Tâm Trợ Giúp</a>
+                    <a href="#">Hướng Dẫn Mua Hàng</a>
+                    <a href="#">Thanh Toán</a>
+                    <a href="#">Vận Chuyển</a>
+                    <a href="#">Chăm Sóc Khách Hàng</a>
+                    <a href="#">Chính Sách Bảo Hành</a>
+                </div>
+                <div class="footer-column">
+                    <h3>VỀ CÔNG TY</h3>
+                    <a href="#">Giới Thiệu</a>
+                    <a href="#">Tuyển Dụng</a>
+                    <a href="#">Chính Sách Bảo Mật</a>
+                    <a href="#">Chính Hãng</a>
+                    <a href="#">Kênh Người Bán</a>
+                    <a href="#">Flash Sales</a>
+                </div>
+                <div class="footer-column">
+                    <h3>DANH MỤC</h3>
+                    <a href="#">Điện Thoại</a>
+                    <a href="#">Laptop</a>
+                    <a href="#">Máy Tính Bảng</a>
+                    <a href="#">Phụ Kiện</a>
+                    <a href="#">Smartwatch</a>
+                    <a href="#">Đồng Hồ</a>
+                </div>
+                <div class="footer-column">
+                    <h3>THEO DÕI CHÚNG TÔI TRÊN</h3>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 TechStore. Tất cả các quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - DoAn - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    </body>
+</html>
